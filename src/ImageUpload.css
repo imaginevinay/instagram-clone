@@ -1,0 +1,19 @@
+.image_upload {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -6px;
+}
+
+.caption{
+    margin: 10px 0 20px 0;
+}
+
+.upload_button{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.progress_bar {
+    width: 100%;
+}

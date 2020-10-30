@@ -1,0 +1,93 @@
+.post{
+    background-color: white;
+    max-width: 400px;
+    border: 1px solid lightgray;
+    margin-bottom: 45px;
+    box-shadow:0px 13px 10px -7px rgba(0, 0, 0,0.1);
+    border-radius: 3px;
+}
+.post_image{
+    width: 100%;
+    object-fit: contain;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.post_caption{
+    font-weight: normal;
+}
+
+.postTimeStamp{
+    position: relative;
+    left: 53%;
+
+}
+
+.post_header{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.post_avatar{
+    margin-right: 10px;
+}
+
+.post_caption{
+    padding: 20px;
+}
+
+.comments_box{
+    display: flex;
+    margin-top: 10px;
+}
+
+.post_comments{
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-top: 1px solid lightgray;
+}
+.post_button{
+    flex: 0;
+    border: none;
+    color: #6082a3;
+    background-color: transparent;
+    border-top: 1px solid lightgray;
+}
+
+.commentSection{
+    padding: 20px;
+}
+
+.commentBoxMain {
+    display: flex;
+    margin: 20px 0;
+}
+
+.commentTextSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.commentContainer{
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.commentContainer .user_comment{
+    display: inline;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    margin-left: 5px;
+}
+
+.time_stamp{
+    font-size: 10px;
+    font-weight: 700;
+    color: lightslategray;
+    position: relative;
+    top: 5px;
+}
