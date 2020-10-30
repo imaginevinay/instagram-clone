@@ -23,7 +23,7 @@ var strings = {
     year: '1 y',
     years: '%d ys',
     wordSeparator: ' '
-  };
+};
 
 const formatter = buildFormatter(strings)
 
@@ -59,9 +59,19 @@ function Post({ user, postId, userName, caption, imageUrl, timeStamp }) {
     return (
         <div className="post">
             <div className="post_header">
-                <Avatar className="post_avatar" alt={userName} src="/static/images/avatar/1.jpg" />
-                <h3>{userName}</h3>
-                <span className="time_stamp postTimeStamp"><TimeAgo date={timeStamp.toDate()} formatter={formatter} minPeriod ={60} maxPeriod={60} /></span>
+                <div className="header_text">
+                    <Avatar className="post_avatar" alt={userName} src="/static/images/avatar/1.jpg" />
+                    <h3 className="heading">{userName}</h3>
+                </div>
+                <div>
+                    {timeStamp ? (
+                        <span className="time_stamp postTimeStamp">
+                            <TimeAgo date={timeStamp.toDate()} formatter={formatter} minPeriod={60} maxPeriod={60} />
+                        </span>
+                    ) : (
+                            <span></span>
+                        )}
+                </div>
             </div>
             <img className="post_image" alt="" src={imageUrl} />
             <h4 className="post_caption"><strong>{userName} :</strong> {caption}</h4>
@@ -75,10 +85,10 @@ function Post({ user, postId, userName, caption, imageUrl, timeStamp }) {
                             <div className="commentContainer">
                                 <strong>{comment.userName}</strong><p className="user_comment">{comment.text}</p>
                             </div>
-                            {comment?.timestamp ? (<span className="time_stamp"><TimeAgo date={comment.timestamp.toDate()} formatter={formatter} minPeriod ={60} maxPeriod={60} /></span>): (
+                            {comment?.timestamp ? (<span className="time_stamp"><TimeAgo date={comment.timestamp.toDate()} formatter={formatter} minPeriod={60} maxPeriod={60} /></span>) : (
                                 <span></span>
                             )}
-                            
+
                         </div>
                     </div>
                 ))}

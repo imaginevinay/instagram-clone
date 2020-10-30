@@ -19,12 +19,19 @@
 
 .postTimeStamp{
     position: relative;
-    left: 53%;
-
+    top: -2px;
 }
-
+.heading{
+    position: relative;
+    top: 5px;
+}
+.header_text {
+    display: inherit;
+}
 .post_header{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
@@ -89,5 +96,4 @@
     font-weight: 700;
     color: lightslategray;
     position: relative;
-    top: 5px;
 }
